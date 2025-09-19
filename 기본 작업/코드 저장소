@@ -1,0 +1,20 @@
+//헤더 상단 바 바디에 넣음
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <a href="#">내 브랜드</a>
+            </h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#main">메인</a></li>
+                    <li><a href="#section01">안녕 1</a></li>
+                    <li><a href="#section02">섹션 2</a></li>
+                    <li><a href="#section03">섹션 3</a></li>
+                    <li><a href="#section04">섹션 4</a></li>
+                    <li><a href="#section05">섹션 5</a></li>
+                    <li><a href="#section06">섹션 6</a></li>
+                    <li><a href="#contact">문의하기</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
