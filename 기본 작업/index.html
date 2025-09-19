@@ -15,8 +15,13 @@
             </h1>
             <nav class="gnb">
                 <ul>
-                    <li><a href="#about">회사 소개</a></li>
-                    <li><a href="#features">주요 기능</a></li>
+                    <li><a href="#main">메인</a></li>
+                    <li><a href="#section01">안녕 1</a></li>
+                    <li><a href="#section02">섹션 2</a></li>
+                    <li><a href="#section03">섹션 3</a></li>
+                    <li><a href="#section04">섹션 4</a></li>
+                    <li><a href="#section05">섹션 5</a></li>
+                    <li><a href="#section06">섹션 6</a></li>
                     <li><a href="#contact">문의하기</a></li>
                 </ul>
             </nav>
@@ -25,46 +30,60 @@
 
     <main class="main-content">
 
-        <section class="hero-section" id="hero">
-            <div class="container">
-                <h2>서비스의 핵심 가치를 한눈에</h2>
-                <p>강력한 메시지로 방문자의 시선을 사로잡으세요.</p>
-                <a href="#contact" class="cta-button">무료로 시작하기</a>
-            </div>
+        <section class="image-section" id="main">
+            <img src="images/main.png" alt="메인 이미지" class="section-image">
         </section>
 
-        <section class="info-section" id="about">
-            <div class="container">
-                <h3>우리는 무엇을 하는가?</h3>
-                <p>구체적인 설명과 이미지를 통해 방문자의 이해를 돕습니다.</p>
-            </div>
+        <section class="image-section" id="section01">
+            <img src="images/section01.png" alt="섹션 1 이미지" class="section-image">
         </section>
 
-        <section class="features-section" id="features">
-            <div class="container">
-                <h3>이런 기능이 있어요</h3>
-                <div class="feature-item">
-                    <h4>기능 1</h4>
-                    <p>기능에 대한 상세한 설명.</p>
-                </div>
-                <div class="feature-item">
-                    <h4>기능 2</h4>
-                    <p>기능에 대한 상세한 설명.</p>
-                </div>
-            </div>
+        <section class="image-section" id="section02">
+            <img src="images/section02.png" alt="섹션 2 이미지" class="section-image">
         </section>
 
-        <section class="contact-section" id="contact">
+        <section class="image-section" id="section03">
+            <img src="images/section03.png" alt="섹션 3 이미지" class="section-image">
+        </section>
+
+        <section class="image-section" id="section04">
+            <img src="images/section04.png" alt="섹션 4 이미지" class="section-image">
+        </section>
+
+        <section class="image-section" id="section05">
+            <img src="images/section05.png" alt="섹션 5 이미지" class="section-image">
+        </section>
+
+        <section class="image-section" id="section06">
+            <img src="images/section06.png" alt="섹션 6 이미지" class="section-image">
+        </section>
+        
+        <section class="contact-section-card" id="contact">
             <div class="container">
-                <h3>지금 바로 문의하세요</h3>
+                <div class="contact-card">
+                    <h3>문의하기</h3>
+                    <p>24시간 내에 답변드리겠습니다.</p>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="이름" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="이메일" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="연락처 (선택)">
+                        </div>
+                        <button type="submit" class="cta-button">문의 접수</button>
+                    </form>
                 </div>
+            </div>
         </section>
 
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 내 브랜드. All Rights Reserved.</p>
+            <p>&copy; 2025 LOOP. All Rights Reserved.</p>
         </div>
     </footer>
 

@@ -11,7 +11,8 @@ html {
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    color: #333;
+    background-color: #1B1B1B;
+    color: #fff;
     line-height: 1.6;
 }
 
@@ -25,9 +26,13 @@ body {
 
 /* 헤더 스타일 */
 .header {
-    background-color: #fff;
-    border-bottom: 1px solid #eee;
+    background-color: #1B1B1B;
+    border-bottom: 1px solid #333;
     padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 .header .container {
@@ -39,7 +44,7 @@ body {
 .logo a {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -50,7 +55,7 @@ body {
 }
 
 .gnb a {
-    color: #555;
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
@@ -60,45 +65,80 @@ body {
     color: #007bff;
 }
 
-/* 메인 섹션 공통 스타일 */
-section {
+/* 이미지 섹션 공통 스타일 */
+.image-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 이미지 자체에 대한 스타일 */
+.section-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 문의 폼 섹션 스타일 */
+.contact-section-card {
+    background-color: #1B1B1B;
     padding: 5rem 0;
-}
-
-h2, h3, h4 {
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-
-h2 { font-size: 2.5rem; }
-h3 { font-size: 2rem; }
-h4 { font-size: 1.5rem; }
-
-/* 히어로 섹션 스타일 */
-.hero-section {
-    background-color: #f8f9fa;
+    color: #fff;
     text-align: center;
 }
 
-.hero-section h2 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+.contact-card {
+    background-color: #2c2c2c;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.hero-section p {
-    font-size: 1.25rem;
+.contact-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.contact-card p {
+    font-size: 1rem;
+    color: #ccc;
     margin-bottom: 2rem;
 }
 
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.form-group input::placeholder {
+    color: #888;
+}
+
 .cta-button {
-    display: inline-block;
+    width: 100%;
+    padding: 1rem;
     background-color: #007bff;
     color: #fff;
-    padding: 0.75rem 2rem;
-    border-radius: 5px;
-    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
     font-weight: bold;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
 }
 
 .cta-button:hover {
@@ -107,26 +147,8 @@ h4 { font-size: 1.5rem; }
 
 /* 푸터 스타일 */
 .footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #111;
+    color: #888;
     text-align: center;
     padding: 2rem 0;
-}
-
-/* 반응형 디자인 (작은 화면) */
-@media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .gnb ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .hero-section h2 {
-        font-size: 2.5rem;
-    }
 }
