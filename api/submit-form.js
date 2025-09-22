@@ -44,7 +44,7 @@ export default async function handler(req, res) {
     // 2. 구글 시트에 데이터 추가
     await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.SPREADSHEET_ID,
-      range: "loopdata!A:C", // 시트 이름과 범위
+      range: "loopdata!A1", // 시트 이름과 범위
       valueInputOption: 'USER_ENTERED',
       resource: {
         values: [[name, email, phone]],
