@@ -33,6 +33,7 @@ body {
         max-width: 100%;
         margin: 0;
         padding: 0;
+        z-index: 10;
     }
 }
 
@@ -73,6 +74,7 @@ body {
     text-decoration: none;
     font-weight: 250;
     transition: color 0.3s;
+    font-size: 0.5rem; /* 예시: 1rem -> 0.9rem */
 }
 
 .gnb a:hover {
