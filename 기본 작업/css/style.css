@@ -174,3 +174,17 @@ body {
     text-align: center;
     padding: 2rem 0;
 }
+/* ===== ▼▼▼ 스크롤 애니메이션 효과 ▼▼▼ ===== */
+
+/* 초기 상태: 요소를 아래로 50px 이동시키고 투명하게 만듭니다. */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.7s ease-out; /* 0.7초 동안 부드럽게 변화하도록 설정 */
+}
+
+/* 활성화 상태: 요소를 원래 위치로 이동시키고 완전히 보이게 합니다. */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
