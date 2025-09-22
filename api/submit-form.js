@@ -36,7 +36,7 @@ export default async function handler(req, res) {
   try {
     // 1. Supabase에 데이터 저장
     const { error: supabaseError } = await supabase
-      .from('contacts') // Supabase 테이블 이름
+      .from('new_contact') // Supabase 테이블 이름
       .insert({ name, email, phone });
 
     if (supabaseError) throw supabaseError;
