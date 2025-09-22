@@ -35,6 +35,24 @@ body {
         padding: 0;
         z-index: 10;
     }
+    /* ===== ▼▼▼ 모바일 전용 글자 크기 조절 ▼▼▼ ===== */
+
+    /* 헤더 메뉴 글자 크기 줄이기 */
+    .gnb a {
+        font-size: 0.5rem; /* 예시: 1rem -> 0.9rem */
+    }
+
+    /* '문의하기' 제목 글자 크기 줄이기 */
+    .contact-card h3 {
+        font-size: 1.8rem; /* 예시: 2rem -> 1.8rem */
+    }
+
+    /* '문의하기' 설명 글자 크기 줄이기 */
+    .contact-card p {
+        font-size: 0.9rem; /* 예시: 1rem -> 0.9rem */
+    }
+
+    /* ===== ▲▲▲ 여기까지 ▲▲▲ ===== */
 }
 
 /* 헤더 스타일 */
@@ -74,7 +92,6 @@ body {
     text-decoration: none;
     font-weight: 250;
     transition: color 0.3s;
-    font-size: 0.5rem; /* 예시: 1rem -> 0.9rem */
 }
 
 .gnb a:hover {
