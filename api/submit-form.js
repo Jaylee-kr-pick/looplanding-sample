@@ -33,11 +33,19 @@ export default async function handler(req, res) {
 
   const { name, email, phone } = req.body;
 
+  // ===== ▼▼▼ 수정된 부분 (시간 생성) ▼▼▼ =====
+  // 한국 시간(KST)으로 현재 시간을 생성합니다.
+  const now = new Date();
+  const kstOffset = 9 * 60 * 60 * 1000; // 9시간을 밀리초로 변환
+  const kstTime = new Date(now.getTime() + kstOffset);
+  const timestamp = kstTime.toISOString().replace('T', ' ').substring(0, 19);
+  // ===== ▲▲▲ 수정된 부분 (시간 생성) ▲▲▲ =====
+
   try {
     // 1. Supabase에 데이터 저장
     const { error: supabaseError } = await supabase
       .from('new_contact') // Supabase 테이블 이름
-      .insert({ name, email, phone });
+      .insert({ name, email, phone, created_at: timestamp }); // created_at 필드에 timestamp 추가 (필드명은 실제 테이블에 맞게 수정)
 
     if (supabaseError) throw supabaseError;
 
@@ -47,7 +55,7 @@ export default async function handler(req, res) {
       range: 'loopdata!A:C', // 시트 이름과 범위
       valueInputOption: 'USER_ENTERED',
       resource: {
-        values: [[name, email, phone]],
+        values: [[name, email, phone, timestamp]], // timestamp 추가
       },
     });
 
@@ -56,7 +64,7 @@ export default async function handler(req, res) {
       from: process.env.EMAIL_USER,
       to: process.env.CLIENT_EMAIL,
       subject: `새 문의가 접수되었습니다: ${name}`,
-      html: `<p>이름: ${name}</p><p>이메일: ${email}</p><p>전화번호: ${phone}</p>`,
+      html: `<p>이름: ${name}</p><p>이메일: ${email}</p><p>전화번호: ${phone}</p><p>접수 시간: ${timestamp}</p>`, // 메일 내용에도 시간 추가
     };
     await transporter.sendMail(mailOptions);
 
